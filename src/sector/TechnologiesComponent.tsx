@@ -33,15 +33,15 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
 <div>
         
     <div className='container mx-auto'>
-        <div className='flex gap-4 mb-2'>
-
+        <div className='md:text-start  flex justify-center items-center gap-4 mb-2'>
                 <p className='font-extrabold text-4xl'>Explore the </p>
                 <p className='font-extrabold text-4xl bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent'> Technologies</p>
         </div>
-                <p className='text-[#475569]'>Pick one technology per category to build your ideal stack.</p>
-        <div className='flex justify-between  items-start mt-6 gap-3 '>
-         
-             
+
+        <p className='text-[#475569] md:text-start  flex justify-center items-center'>Pick one technology per category to build your ideal stack.</p>
+        
+        <div className='md:flex flex flex-col md:flex-row md:justify-between justify-center items-center   md:items-start mt-6 gap-3 '>
+            
          <div>
             <RemainStack technologies={technologies}   
             countStack={countStack} 

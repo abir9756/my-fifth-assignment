@@ -8,7 +8,7 @@ import { GiCheckMark } from 'react-icons/gi';
 
 
 
-const TechnologiesCard = ({technologie,countStack,StackTechnologies,setStackTechnologies,isadded,setisadded}) => {
+const TechnologiesCard = ({technologie,countStack,StackTechnologies,setStackTechnologies}) => {
 
 
 

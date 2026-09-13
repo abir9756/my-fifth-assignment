@@ -3,14 +3,7 @@ import type { CardPromisType } from '../App';
 import RenderStack from './RenderStack';
 import RemainStack from './RemainStack';
 
-
-
-interface TechnologiesComponentType{
-    CardPromis:Promise<CardPromisType[]>;
-}
-
-// const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies}:TechnologiesComponentType) => {
-const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies, isadded, setisadded}:TechnologiesComponentType) => {
+const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies}) => {
   
     const[CountStack,setCountStack] = useState([]);
     const technologies = use(CardPromis)
@@ -30,8 +23,9 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
 
     }
 
-      const removeAllTechnologies = (StackTechnologies)=>{
+      const removeAllTechnologies = ()=>{
         setStackTechnologies([])
+       setCountStack([])
     }
 
 
@@ -76,7 +70,7 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
                  <RenderStack  StackTechnologies={StackTechnologies} setStackTechnologies={setStackTechnologies}></RenderStack> 
 
                <button
-               onClick={()=>removeAllTechnologies(StackTechnologies)}
+               onClick={()=>removeAllTechnologies()}
                className="btn btn-outline btn-error border rounded-md mt-10 w-full">Remove All</button>
         
             </div>

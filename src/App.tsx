@@ -32,7 +32,7 @@ const CardPromis = async():Promise<CardPromisType[] >=>{
 function App() {
 
     const [StackTechnologies, setStackTechnologies] = useState([])
-    const [isadded , setisadded] = useState(false)
+    
     
  
    
@@ -50,8 +50,7 @@ function App() {
     CardPromis={CardPromis()}
      StackTechnologies={StackTechnologies}
       setStackTechnologies={setStackTechnologies}
-      isadded={isadded}
-      setisadded={setisadded}
+     
     
     
     ></TechnologiesComponent>

@@ -36,9 +36,6 @@ const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
                                 </div>
                         </div>
                       
-                     {/* <div>
-                        <button className="btn btn-outline btn-error border rounded-md mt-10 w-full">Remove All</button>
-                    </div> */}
                                 
                     </div>
                           

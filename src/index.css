@@ -1,0 +1,9 @@
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.addedCountry{
+    /* border: 2px solid greenyellow; */
+    background-color: rgb(0, 143, 253);
+}

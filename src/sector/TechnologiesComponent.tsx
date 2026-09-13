@@ -1,0 +1,102 @@
+import  { use, useState } from 'react';
+import type { CardPromisType } from '../App';
+import TechnologiesCard from './TechnologiesCard';
+import RenderStack from './RenderStack';
+import RemainStack from './RemainStack';
+
+
+
+interface TechnologiesComponentType{
+    CardPromis:Promise<CardPromisType[]>;
+}
+
+// const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies}:TechnologiesComponentType) => {
+const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies, isadded, setisadded}:TechnologiesComponentType) => {
+  
+    const[CountStack,setCountStack] = useState([]);
+    const technologies = use(CardPromis)
+    console.log("CardPromis",technologies)
+
+    //    const handleButton=()={
+    //     setisadded(true)
+    // }
+      
+      
+
+    const countStack =(alltech) =>{
+      
+        const exist = CountStack.find(t=>t.name===alltech.name)
+         if(exist){
+            const remainingStack = CountStack.filter(t=>t.name !==alltech.name)
+            setCountStack(remainingStack)
+         }
+         else{
+            const newStack = [...CountStack,alltech]
+            setCountStack(newStack)
+         }
+
+    }
+
+      const removeAllTechnologies = (StackTechnologies)=>{
+        setStackTechnologies([])
+    }
+
+
+    return (
+<div>
+        
+    <div className='container mx-auto'>
+        <div className='flex gap-4 mb-2'>
+
+                <p className='font-extrabold text-4xl'>Explore the </p>
+                <p className='font-extrabold text-4xl bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent'> Technologies</p>
+        </div>
+                <p className='text-[#475569]'>Pick one technology per category to build your ideal stack.</p>
+        <div className='flex justify-between  items-start mt-6 gap-3 '>
+         
+             
+         <div>
+            <RemainStack technologies={technologies}   
+            countStack={countStack} 
+            StackTechnologies={StackTechnologies}
+            setStackTechnologies={setStackTechnologies}
+            ></RemainStack> 
+       
+       
+        </div>
+       
+
+<div className="col-span-1 sticky top-17 z-10 card card-body bg-base-100 w-80 shadow-sm " >
+
+    <div>
+        {
+            StackTechnologies.length===0? (
+                <div>
+                <h2 className='font-bold mb-1'>Your Stack</h2>
+                <p className='text-[#475569] mb-1'> No technologies selected yet.</p>
+                <p className='border-2 text-[#475569] border-gray-700 border-dotted overflow-hidden p-6 rounded-2xl flex justify-center items-center'>Your stack is empty.</p>
+                </div>
+            ):
+            <div>
+                <h2 className='font-bold'>Your Stack</h2>
+                <p className='text-[#475569]'> {StackTechnologies.length} Technologies Selected </p>
+                 <RenderStack  StackTechnologies={StackTechnologies} setStackTechnologies={setStackTechnologies}></RenderStack> 
+
+               <button
+               onClick={()=>removeAllTechnologies(StackTechnologies)}
+               className="btn btn-outline btn-error border rounded-md mt-10 w-full">Remove All</button>
+        
+            </div>
+        }
+      
+     </div>
+    </div>  
+</div>
+
+</div>
+     <div className="divider my-17"></div>
+</div>
+    );
+};
+
+export default TechnologiesComponent;

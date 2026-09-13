@@ -1,6 +1,5 @@
 import  { use, useState } from 'react';
 import type { CardPromisType } from '../App';
-import TechnologiesCard from './TechnologiesCard';
 import RenderStack from './RenderStack';
 import RemainStack from './RemainStack';
 
@@ -16,12 +15,6 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
     const[CountStack,setCountStack] = useState([]);
     const technologies = use(CardPromis)
     console.log("CardPromis",technologies)
-
-    //    const handleButton=()={
-    //     setisadded(true)
-    // }
-      
-      
 
     const countStack =(alltech) =>{
       

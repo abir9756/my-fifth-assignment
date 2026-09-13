@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Logo from '../assets/logo-text.png'
 const Mainfooter = () => {
     return (
@@ -47,8 +47,8 @@ const Mainfooter = () => {
                 <div className='p-8 text-[#94A3B8] flex justify-between '>
                     <p >© 2026 Dev Stack. All rights reserved.</p>
                     <div className='flex gap-2'>
-                    <p>Terms</p>
-                    <p>Privacy</p>
+                    <p><a href="">Terms</a></p>
+                    <p><a href="">Privacy</a></p>
                     </div>
                 </div>
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import TechnologiesCard from './TechnologiesCard';
 
 const RemainStack = ({technologies,countStack,StackTechnologies,setStackTechnologies}) => {

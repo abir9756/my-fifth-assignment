@@ -1,12 +1,9 @@
 
-import { useState } from "react";
-import Banner from "../assets/banner-stack.png"
-import TechnologiesCard from "./TechnologiesCard";
-import TechnologiesComponent from "./TechnologiesComponent";
+import Banner from "../assets/banner-stack.png"   
 const HeroSection = () => {
 
 
-    // const [StackTechnologies, setStackTechnologies] = useState([])
+  
 
     return (<>
         

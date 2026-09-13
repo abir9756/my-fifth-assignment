@@ -3,7 +3,7 @@ import Logo from '../assets/logo-text.png'
 const Mainfooter = () => {
     return (
         <div className="container mx-auto mt-16 mb-12 ">
-                <div className='md:flex-row flex flex-col text-center md:text-start justify-center items-center md:justify-between   gap-10 mb-14'>
+                <div className='md:flex-row flex flex-col text-center md:text-start justify-center  md:justify-between   gap-10 mb-14'>
                 
                     <div>
                         <img src={Logo} className=' mb-3 mx-auto md:mx-0 '/>

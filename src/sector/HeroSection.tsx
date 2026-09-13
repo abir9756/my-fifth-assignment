@@ -7,8 +7,8 @@ const HeroSection = () => {
 
     return (<>
         
-    <div className='container mx-auto my-24 text-center  md:text-start flex flex-col justify-between items-center md:flex-row'>
-        <div className="text-center md:text-start flex-col ">
+    <div className='container mx-auto md:mx-0 my-24 text-center  md:text-start flex flex-col justify-between  items-center md:flex-row'>
+        <div className="text-center md:text-start flex  flex-col items-start ">
                 <p className='font-extrabold text-6xl'> Build Your Ideal</p>
                 <p className='pb-6  font-extrabold text-6xl bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'>Development Stack</p>
                 <p className='pb-10 text-[#475569] '>Explore frontend, backend, database, and tooling options,<br></br>

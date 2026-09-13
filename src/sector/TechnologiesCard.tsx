@@ -62,7 +62,7 @@ transition: Bounce,
                     </figure>
 
                     <h2 className="card-title">{technologie.name}</h2>
-                    <p>{technologie.description}</p>
+                    <p className='text-[#4B5563]'>{technologie.description}</p>
 
                         
                     <div className="divider my-2"></div>
@@ -71,7 +71,7 @@ transition: Bounce,
 
                         <span className=' rounded-2xl w-auto mr-10  bg-slate-100 text-[#4D4769]'>{technologie.category}</span>
                   
-                        <p>{technologie.difficulty}</p>
+                        <p className='text-[#6B7280]'>{technologie.difficulty}</p>
 
                         <div className='flex items-center'>
                             <img className='w-2.5 h-2.5' src={Star} alt='' />

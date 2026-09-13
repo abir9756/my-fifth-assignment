@@ -17,6 +17,14 @@ const Nav = () => {
             {isClicked?<FiX />:<RxHamburgerMenu />}
             </button>
 
+            <ul className={`${isClicked? "flex":"hidden"} list-disc flex-col md:hidden  `}>
+                <li><a href="" >Home</a></li>
+                <li><a href="" >Technologies</a></li>
+                <li><a href="" >Projects</a></li>
+                <li><a href="" >About</a></li>
+                <li><a href="" >Contact</a></li>
+           </ul>
+
             <img src={Logo} alt="logo"/>
 
             <ul className="font-medium hidden text-[#475569]  md:flex gap-4">
@@ -33,16 +41,7 @@ const Nav = () => {
                
             </div>
 
-            {/* {isClicked &&
-                <div className="hidden flex-col px-3 pb-5 ">
-                    <a href="" onClick={()=>setisClicked(false)}>Home</a>
-                    <a href="" onClick={()=>setisClicked(false)}>Technologies</a>
-                    <a href="" onClick={()=>setisClicked(false)}>Projects</a>
-                    <a href="" onClick={()=>setisClicked(false)}>About</a>
-                    <a href="" onClick={()=>setisClicked(false)}>Contact</a>
-
-                </div>
-            } */}
+        
         </div>
     </nav>
       

@@ -1,26 +1,19 @@
-
 import { ToastContainer } from 'react-toastify'
 import Nav from './sector/Nav'
 import HeroSection from './sector/HeroSection'
 import { Suspense, useState } from 'react'
 import TechnologiesComponent from './sector/TechnologiesComponent'
 import Mainfooter from './sector/Mainfooter'
+import type { Technology } from './types'
 
-
-
-
-
-const CardPromis = async() =>{
-    const res = await fetch("../public/jData.json");
+const CardPromis = async (): Promise<Technology[]> => {
+    const res = await fetch("/jData.json");
     const data = await res.json();
     return data;
 }
 
-
-
 function App() {
-
-    const [StackTechnologies, setStackTechnologies] = useState([])
+    const [StackTechnologies, setStackTechnologies] = useState<Technology[]>([])
     
   return (
     <>
@@ -42,3 +35,4 @@ function App() {
 }
 
 export default App
+

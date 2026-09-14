@@ -1,14 +1,19 @@
 
-import { useState } from 'react';
+import { useState, type FC, type Dispatch, type SetStateAction } from 'react';
 
 import Star from '../assets/Symbol.png'
-import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { GiCheckMark } from 'react-icons/gi';
+import type { Technology } from '../types';
 
+interface TechnologiesCardProps {
+  technologie: Technology;
+  countStack: (alltech: Technology) => void;
+  StackTechnologies: Technology[];
+  setStackTechnologies: Dispatch<SetStateAction<Technology[]>>;
+}
 
-
-
-const TechnologiesCard = ({technologie,countStack,StackTechnologies,setStackTechnologies}) => {
+const TechnologiesCard: FC<TechnologiesCardProps> = ({technologie,countStack,StackTechnologies,setStackTechnologies}) => {
 
 
 

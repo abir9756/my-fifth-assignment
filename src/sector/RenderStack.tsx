@@ -1,11 +1,18 @@
 
+import type { FC, Dispatch, SetStateAction } from 'react';
 import {  RxCross1 } from 'react-icons/rx';
 import { toast } from 'react-toastify';
+import type { Technology } from '../types';
 
-const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
+interface RenderStackProps {
+  StackTechnologies: Technology[];
+  setStackTechnologies: Dispatch<SetStateAction<Technology[]>>;
+}
+
+const RenderStack: FC<RenderStackProps> = ({ StackTechnologies, setStackTechnologies }) => {
 
 
-    const removeTechnologies =(tech) =>{
+    const removeTechnologies =(tech: Technology) =>{
          const restTech = StackTechnologies.filter(Tech=>Tech.name!==tech.name)
          setStackTechnologies(restTech)
          toast.warning("Removed")
@@ -32,7 +39,7 @@ const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
                                 <div>
                                     <span 
                                     onClick={()=>removeTechnologies(tech)}
-                                    className=' text-[#94A3B8] text-2xl '>
+                                    className=' text-[#94A3B8] text-2xl cursor-pointer'>
                                     <RxCross1 />
                                     </span>
                                 </div>

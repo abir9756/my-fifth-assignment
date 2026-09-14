@@ -1,7 +1,6 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
-@import "./theme.css";
 
 :root {
   --color-1: #ff5722;

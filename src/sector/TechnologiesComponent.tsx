@@ -76,7 +76,6 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
                <button
                onClick={()=>removeAllTechnologies()}
                className="btn btn-outline btn-error border rounded-md mt-10 w-full">Remove All</button>
-        
             </div>
         }
       

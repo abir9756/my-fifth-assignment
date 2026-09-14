@@ -40,7 +40,7 @@ const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
                     </div>   
                     )
                 })
-}    
+            }    
         </div>
     );
 };

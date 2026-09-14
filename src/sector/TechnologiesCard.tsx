@@ -32,15 +32,8 @@ const TechnologiesCard = ({technologie,countStack,StackTechnologies,setStackTech
 
     }
 
-    
-
-    
-    
-    
     return (<>
 
-
-      
             <div className={`card bg-base-100 w-96 shadow-sm  ${Added?"border border-blue-700":""}`}>
           
                 <div className="card-body">

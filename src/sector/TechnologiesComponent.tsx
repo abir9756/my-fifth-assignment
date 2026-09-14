@@ -1,7 +1,7 @@
 import  { use, useState } from 'react';
-import type { CardPromisType } from '../App';
 import RenderStack from './RenderStack';
 import RemainStack from './RemainStack';
+import { toast } from 'react-toastify';
 
 const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnologies}) => {
   
@@ -26,6 +26,10 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
       const removeAllTechnologies = ()=>{
         setStackTechnologies([])
        setCountStack([])
+      
+        toast.warning("Removed all from stack")
+        
+       
     }
 
 
@@ -35,7 +39,7 @@ const TechnologiesComponent = ({CardPromis, StackTechnologies, setStackTechnolog
     <div className='container mx-auto'>
         <div className='md:text-start  flex justify-center md:justify-start items-center md:items-start gap-4 mb-2'>
                 <p className='font-extrabold text-4xl'>Explore the </p>
-                <p className='font-extrabold text-4xl bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent'> Technologies</p>
+                <p className='font-extrabold text-4xl  bg-(image:--primary-gradient) bg-clip-text text-transparent'> Technologies</p>
         </div>
 
         <p className='text-[#475569] md:text-start  flex justify-center md:justify-start items-center'>Pick one technology per category to build your ideal stack.</p>

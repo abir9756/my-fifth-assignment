@@ -1,5 +1,6 @@
 
 import {  RxCross1 } from 'react-icons/rx';
+import { toast } from 'react-toastify';
 
 const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
 
@@ -7,6 +8,7 @@ const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
     const removeTechnologies =(tech) =>{
          const restTech = StackTechnologies.filter(Tech=>Tech.name!==tech.name)
          setStackTechnologies(restTech)
+         toast.warning("Removed")
     }
 
     return (
@@ -34,15 +36,10 @@ const RenderStack = ({ StackTechnologies, setStackTechnologies }) => {
                                     <RxCross1 />
                                     </span>
                                 </div>
-                        </div>
-                      
-
-                                
-                    </div>
-                          
+                        </div>       
+                    </div>   
                     )
                 })
-                
 }    
         </div>
     );

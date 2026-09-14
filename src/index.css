@@ -1,9 +1,17 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
+@import "./theme.css";
 
+:root {
+  --color-1: #ff5722;
+  --color-2: #d81b7e;
+  --color-3: #7c3aed;
 
-.addedCountry{
-    /* border: 2px solid greenyellow; */
-    background-color: rgb(0, 143, 253);
+  --primary-gradient: linear-gradient(
+    to right,
+    var(--color-1),
+    var(--color-2),
+    var(--color-3)
+  );
 }

@@ -22,24 +22,17 @@ const TechnologiesCard = ({technologie,countStack,StackTechnologies,setStackTech
             return
         }
         
-    countStack(technologie);
+        countStack(technologie);
    
-   setAdded(!Added)
+        setAdded(!Added)
     
-   setStackTechnologies([...StackTechnologies, technologie]);
+        setStackTechnologies([...StackTechnologies, technologie]);
 
-toast.success('Added to Stack', {
-position: "top-center",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+        toast.success('Added to Stack')
+
     }
+
+    
 
     
     

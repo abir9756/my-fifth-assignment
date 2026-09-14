@@ -46,7 +46,7 @@ const Mainfooter = () => {
                   <div className='divider'></div>
 
                     <div className='p-8 text-[#94A3B8] flex justify-between '>
-                      <p >© 2026 Dev Stack. All rights reserved.</p>
+                      <p ><a href="">© 2026 Dev Stack. All rights reserved.</a></p>
                       <div className='flex gap-2'>
                       <p><a href="">Terms</a></p>
                       <p><a href="">Privacy</a></p>
